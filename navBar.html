@@ -22,12 +22,13 @@
 
        nav {
            width: 100%;
-           height: 100px;
+           height: 70px;
            background-color: #E8F3F2;
            display: flex;
            align-items: center;
            justify-content: space-between;
            padding: 0 20px;
+           position: relative; 
        }
 
         .nav-right {
@@ -113,7 +114,7 @@
        .dropdown {
            display: none;
            position: absolute;
-           top: 100px;
+           top: 70px;
            left: 0;
            width: 100%;
            background-color: #E8F3F2;
@@ -136,14 +137,22 @@
        }
 
        @media (max-width: 900px) {
-           .navbar {
-               display: none;
-           }
+            .navbar {
+                display: none;
+            }
 
-           .menuSelect {
-               display: block;
-           }
-       }
+            .menuSelect {
+                display: block;
+                position: absolute;
+                right: 20px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+
+            .dropdown button.contact-button {
+                margin-bottom: 20px;
+            }
+        }
 
        /* Modal Styles */
        .modal {
@@ -230,11 +239,10 @@
         
         <div class="dropdown">
             <ul>
-                <li><a rel="preload" href="index.html">Home</a></li>
-                <li><a rel="preload" href="ourTeam.html">Our Team</a></li>
-                <li><a rel="preload" href="joinUs.html">Join Us</a></li>
-                <li><a rel="preload" href="pastLessons.html">Past Lessons</a></li>
-                <li><a rel="preload" href="newsletter.html">Newsletter</a></li>
+                <li><a rel="preload" href="ourTeam.html">OUR TEAM</a></li>
+                <li><a rel="preload" href="joinUs.html">JOIN US</a></li>
+                <li><a rel="preload" href="pastLessons.html">PAST LESSONS</a></li>
+                <li><a rel="preload" href="newsletter.html">NEWSLETTER</a></li>
                 <button class="contact-button" onclick="openModal()">Contact Us!</button>
             </ul>
         </div>
